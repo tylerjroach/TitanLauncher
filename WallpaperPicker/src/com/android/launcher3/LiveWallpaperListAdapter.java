@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.launcher3;
+package com.tylerjroach.titan;
 
 import android.app.WallpaperInfo;
 import android.app.WallpaperManager;
@@ -34,7 +34,7 @@ import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.TextView;
 
-import com.android.launcher3.util.Thunk;
+import com.tylerjroach.titan.util.Thunk;
 
 import org.xmlpull.v1.XmlPullParserException;
 

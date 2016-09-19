@@ -14,7 +14,7 @@
  * limitations under the License
  */
 
-package com.android.launcher3;
+package com.tylerjroach.titan;
 
 import android.content.Context;
 import android.util.AttributeSet;

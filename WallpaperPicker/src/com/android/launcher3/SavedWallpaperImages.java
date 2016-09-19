@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.launcher3;
+package com.tylerjroach.titan;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -35,7 +35,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListAdapter;
 
-import com.android.launcher3.WallpaperCropActivity.CropViewScaleAndOffsetProvider;
+import com.tylerjroach.titan.WallpaperCropActivity.CropViewScaleAndOffsetProvider;
 import com.android.photos.views.TiledImageRenderer.TileSource;
 
 import java.io.ByteArrayInputStream;

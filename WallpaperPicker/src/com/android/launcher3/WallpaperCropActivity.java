@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.launcher3;
+package com.tylerjroach.titan;
 
 import android.annotation.TargetApi;
 import android.app.ActionBar;
@@ -45,9 +45,9 @@ import android.widget.Toast;
 import com.android.gallery3d.common.BitmapCropTask;
 import com.android.gallery3d.common.BitmapUtils;
 import com.android.gallery3d.common.Utils;
-import com.android.launcher3.base.BaseActivity;
-import com.android.launcher3.util.Thunk;
-import com.android.launcher3.util.WallpaperUtils;
+import com.tylerjroach.titan.base.BaseActivity;
+import com.tylerjroach.titan.util.Thunk;
+import com.tylerjroach.titan.util.WallpaperUtils;
 import com.android.photos.BitmapRegionTileSource;
 import com.android.photos.BitmapRegionTileSource.BitmapSource;
 import com.android.photos.BitmapRegionTileSource.BitmapSource.InBitmapProvider;

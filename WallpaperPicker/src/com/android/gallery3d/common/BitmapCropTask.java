@@ -33,9 +33,9 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.android.launcher3.NycWallpaperUtils;
-import com.android.launcher3.R;
-import com.android.launcher3.Utilities;
+import com.tylerjroach.titan.NycWallpaperUtils;
+import com.tylerjroach.titan.R;
+import com.tylerjroach.titan.Utilities;
 
 import java.io.BufferedInputStream;
 import java.io.ByteArrayInputStream;

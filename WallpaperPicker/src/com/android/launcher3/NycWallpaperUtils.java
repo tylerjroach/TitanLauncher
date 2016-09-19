@@ -1,4 +1,4 @@
-package com.android.launcher3;
+package com.tylerjroach.titan;
 
 import android.app.AlertDialog;
 import android.app.WallpaperManager;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.launcher3;
+package com.tylerjroach.titan;
 
 import android.Manifest;
 import android.animation.LayoutTransition;
@@ -77,7 +77,7 @@ import android.widget.Toast;
 import com.android.gallery3d.common.BitmapCropTask;
 import com.android.gallery3d.common.BitmapUtils;
 import com.android.gallery3d.common.Utils;
-import com.android.launcher3.util.Thunk;
+import com.tylerjroach.titan.util.Thunk;
 import com.android.photos.BitmapRegionTileSource;
 import com.android.photos.BitmapRegionTileSource.BitmapSource;
 
@@ -95,7 +95,7 @@ public class WallpaperPickerActivity extends WallpaperCropActivity {
     public static final int IMAGE_PICK = 5;
     public static final int PICK_WALLPAPER_THIRD_PARTY_ACTIVITY = 6;
     /** An Intent extra used when opening the wallpaper picker from the workspace overlay. */
-    public static final String EXTRA_WALLPAPER_OFFSET = "com.android.launcher3.WALLPAPER_OFFSET";
+    public static final String EXTRA_WALLPAPER_OFFSET = "com.tylerjroach.titan.WALLPAPER_OFFSET";
     private static final String TEMP_WALLPAPER_TILES = "TEMP_WALLPAPER_TILES";
     private static final String SELECTED_INDEX = "SELECTED_INDEX";
     private static final int FLAG_POST_DELAY_MILLIS = 200;
@@ -1207,8 +1207,8 @@ public class WallpaperPickerActivity extends WallpaperCropActivity {
 
     public Pair<ApplicationInfo, Integer> getWallpaperArrayResourceId() {
         // Context.getPackageName() may return the "original" package name,
-        // com.android.launcher3; Resources needs the real package name,
-        // com.android.launcher3. So we ask Resources for what it thinks the
+        // com.tylerjroach.titan; Resources needs the real package name,
+        // com.tylerjroach.titan. So we ask Resources for what it thinks the
         // package name should be.
         final String packageName = getResources().getResourcePackageName(R.array.wallpapers);
         try {

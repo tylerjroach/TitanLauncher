@@ -24,7 +24,6 @@
 
 <!-- QSB -->
     <dimen name="toolbar_button_vertical_padding">8dip</dimen>
-    <dimen name="toolbar_button_horizontal_padding">8dip</dimen>
 
 <!-- Cling -->
     <dimen name="cling_migration_content_margin">96dp</dimen>

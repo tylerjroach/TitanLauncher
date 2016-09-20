@@ -943,6 +943,11 @@ public class Folder extends LinearLayout implements DragSource, View.OnClickList
     }
 
     @Override
+    public boolean supportsEditDropTarget() {
+        return false;
+    }
+
+    @Override
     public void onFlingToDelete(DragObject d, PointF vec) {
         // Do nothing
     }

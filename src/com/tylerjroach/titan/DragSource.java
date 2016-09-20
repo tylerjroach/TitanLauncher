@@ -41,6 +41,12 @@ public interface DragSource {
      */
     boolean supportsDeleteDropTarget();
 
+    /**
+     * @return whether items dragged from this source supports 'Edit' drop target (e.g. to edit
+     * a shortcut.
+     */
+    boolean supportsEditDropTarget();
+
     /*
      * @return the scale of the icons over the workspace icon size
      */

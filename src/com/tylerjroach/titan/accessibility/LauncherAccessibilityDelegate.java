@@ -22,6 +22,7 @@ import com.tylerjroach.titan.CellLayout;
 import com.tylerjroach.titan.DeleteDropTarget;
 import com.tylerjroach.titan.DragController.DragListener;
 import com.tylerjroach.titan.DragSource;
+import com.tylerjroach.titan.EditDropTarget;
 import com.tylerjroach.titan.Folder;
 import com.tylerjroach.titan.FolderInfo;
 import com.tylerjroach.titan.InfoDropTarget;
@@ -52,6 +53,7 @@ public class LauncherAccessibilityDelegate extends AccessibilityDelegate impleme
     private static final int MOVE = R.id.action_move;
     private static final int MOVE_TO_WORKSPACE = R.id.action_move_to_workspace;
     private static final int RESIZE = R.id.action_resize;
+    private static final int EDIT = R.id.action_edit;
 
     public enum DragType {
         ICON,
@@ -88,6 +90,7 @@ public class LauncherAccessibilityDelegate extends AccessibilityDelegate impleme
                 launcher.getText(R.string.action_move_to_workspace)));
         mActions.put(RESIZE, new AccessibilityAction(RESIZE,
                         launcher.getText(R.string.action_resize)));
+        mActions.put(EDIT, new AccessibilityAction(EDIT, launcher.getText(R.string.action_edit)));
     }
 
     @Override
@@ -104,6 +107,10 @@ public class LauncherAccessibilityDelegate extends AccessibilityDelegate impleme
         }
         if (InfoDropTarget.supportsDrop(host.getContext(), item)) {
             info.addAction(mActions.get(INFO));
+        }
+
+        if (EditDropTarget.supportsDrop(item)) {
+            info.addAction(mActions.get(EDIT));
         }
 
         if ((item instanceof ShortcutInfo)

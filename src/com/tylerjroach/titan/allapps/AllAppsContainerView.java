@@ -468,6 +468,11 @@ public class AllAppsContainerView extends BaseContainerView implements DragSourc
     }
 
     @Override
+    public boolean supportsEditDropTarget() {
+        return true;
+    }
+
+    @Override
     public float getIntrinsicIconScaleFactor() {
         DeviceProfile grid = mLauncher.getDeviceProfile();
         return (float) grid.allAppsIconSizePx / grid.iconSizePx;

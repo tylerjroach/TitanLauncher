@@ -67,6 +67,7 @@ import android.os.Message;
 import android.os.StrictMode;
 import android.os.SystemClock;
 import android.os.UserHandle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Selection;
 import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
@@ -129,7 +130,7 @@ import java.util.List;
 /**
  * Default launcher application.
  */
-public class Launcher extends Activity
+public class Launcher extends AppCompatActivity
         implements View.OnClickListener, OnLongClickListener, LauncherModel.Callbacks,
                    View.OnTouchListener, PageSwitchListener, LauncherProviderChangeListener {
     static final String TAG = "Launcher";
@@ -1178,7 +1179,7 @@ public class Launcher extends Activity
     }
 
     @Override
-    public Object onRetainNonConfigurationInstance() {
+    public Object onRetainCustomNonConfigurationInstance() {
         // Flag the loader to stop early before switching
         if (mModel.isCurrentCallbacks(this)) {
             mModel.stopLoader();
@@ -4128,7 +4129,6 @@ public class Launcher extends Activity
      * Restores a pending widget.
      *
      * @param appWidgetId The app widget id
-     * @param cellInfo The position on screen where to create the widget.
      */
     private void completeRestoreAppWidget(final int appWidgetId) {
         LauncherAppWidgetHostView view = mWorkspace.getWidgetForAppWidgetId(appWidgetId);

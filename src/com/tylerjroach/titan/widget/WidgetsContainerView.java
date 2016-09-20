@@ -259,6 +259,11 @@ public class WidgetsContainerView extends BaseContainerView
     }
 
     @Override
+    public boolean supportsEditDropTarget() {
+        return false;
+    }
+
+    @Override
     public float getIntrinsicIconScaleFactor() {
         return 0;
     }

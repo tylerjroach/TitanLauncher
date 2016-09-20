@@ -4018,6 +4018,11 @@ public class Workspace extends PagedView
     }
 
     @Override
+    public boolean supportsEditDropTarget() {
+        return true;
+    }
+
+    @Override
     public void onFlingToDelete(DragObject d, PointF vec) {
         // Do nothing
     }

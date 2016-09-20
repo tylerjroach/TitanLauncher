@@ -57,7 +57,7 @@
 
 <!-- QSB -->
     <dimen name="toolbar_button_vertical_padding">4dip</dimen>
-    <dimen name="toolbar_button_horizontal_padding">12dip</dimen>
+    <dimen name="toolbar_button_horizontal_padding">8dip</dimen>
 
 <!-- Container -->
     <item name="container_margin" format="fraction" type="fraction">0%</item>

@@ -105,6 +105,7 @@ import com.tylerjroach.titan.compat.LauncherAppsCompat;
 import com.tylerjroach.titan.compat.UserHandleCompat;
 import com.tylerjroach.titan.compat.UserManagerCompat;
 import com.tylerjroach.titan.model.WidgetsModel;
+import com.tylerjroach.titan.ui.EditApplicationFragment;
 import com.tylerjroach.titan.util.ComponentKey;
 import com.tylerjroach.titan.util.LongArrayMap;
 import com.tylerjroach.titan.util.TestingUtils;
@@ -2918,6 +2919,11 @@ public class Launcher extends AppCompatActivity
             return true;
         }
     }
+
+    void startApplicationEditFragment(ComponentName componentName, UserHandleCompat user) {
+        EditApplicationFragment.newInstance().show(getSupportFragmentManager(), EditApplicationFragment.class.getName());
+    }
+
 
     private boolean startActivity(View v, Intent intent, Object tag) {
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

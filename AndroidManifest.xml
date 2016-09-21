@@ -64,6 +64,7 @@
     <uses-permission android:name="com.tylerjroach.titan.permission.RECEIVE_FIRST_LOAD_BROADCAST" />
 
     <application
+        android:name=".application.TitanApplication"
         android:allowBackup="@bool/enable_backup"
         android:backupAgent="com.tylerjroach.titan.LauncherBackupAgentHelper"
         android:hardwareAccelerated="true"

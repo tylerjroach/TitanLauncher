@@ -1,7 +1,9 @@
 package com.tylerjroach.titan;
 
+import android.content.ComponentName;
 import android.content.Context;
 import android.util.AttributeSet;
+import com.tylerjroach.titan.compat.UserHandleCompat;
 
 public class EditDropTarget extends ButtonDropTarget {
 
@@ -22,6 +24,27 @@ public class EditDropTarget extends ButtonDropTarget {
         setDrawable(R.drawable.ic_mode_edit_white_24dp);
     }
 
+    public static void startEditFragment(Object info, Launcher launcher) {
+        ComponentName componentName = null;
+        if (info instanceof AppInfo) {
+            componentName = ((AppInfo) info).componentName;
+        } else if (info instanceof ShortcutInfo) {
+            componentName = ((ShortcutInfo) info).intent.getComponent();
+        } else if (info instanceof PendingAddItemInfo) {
+            componentName = ((PendingAddItemInfo) info).componentName;
+        }
+        final UserHandleCompat user;
+        if (info instanceof ItemInfo) {
+            user = ((ItemInfo) info).user;
+        } else {
+            user = UserHandleCompat.myUserHandle();
+        }
+
+        if (componentName != null) {
+            launcher.startApplicationEditFragment(componentName, user);
+        }
+    }
+
     public static boolean supportsDrop(Object info) {
         return (info instanceof ShortcutInfo)
             || (info instanceof AppInfo);
@@ -33,7 +56,7 @@ public class EditDropTarget extends ButtonDropTarget {
     }
 
     @Override void completeDrop(final DragObject d) {
-
+        startEditFragment(d.dragInfo, mLauncher);
     }
 
 
